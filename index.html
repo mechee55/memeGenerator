@@ -69,7 +69,7 @@
     <input type="file" id="file" />
   </div>
   <div id="image-container">
-    <canvas width="500" height="500"></canvas>
+    <canvas width="500" height="750"></canvas>
     <div class="textInput">
       <span>Top Line:</span>
       <br/>
@@ -108,7 +108,7 @@
       ctx.font = '30pt Impact';
       ctx.textAlign = 'center';
       ctx.strokeStyle = 'black';
-      ctx.lineWidth = 3;
+      ctx.lineWidth = 2;
       ctx.fillStyle = 'white';
 
       if (topLine != null) {
@@ -122,17 +122,13 @@
       }
     }
 
-      
-
-    }
-
     function saveFile() {
       window.open(document.querySelector('canvas').toDataURL());
     }
 
     function handleFileSelect(evt) {
       var canvasWidth = 500;
-      var canvasHeight = 500;
+      var canvasHeight = 750;
       var file = evt.target.files[0];
 
       var reader = new FileReader();
